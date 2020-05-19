@@ -1,14 +1,13 @@
-class Bubble {
+class Corona {
 
     div: HTMLElement
 
     constructor() {
-        console.log("Bubble was created!")
-        this.spawnBubble()
+        this.spawnCorona()
     }
 
-    spawnBubble() {
-        this.div = document.createElement("bubble")
+    spawnCorona() {
+        this.div = document.createElement("corona")
         let background = document.getElementsByTagName("background")
         background[0].appendChild(this.div)
 
@@ -19,11 +18,15 @@ class Bubble {
         this.div.style.transform = `translate(${x}px, ${y}px)`
         this.div.style.filter = `hue-rotate(${color}deg)`
 
-        this.div.addEventListener("click", () => this.onBubbleClick())
-    };
+        this.div.addEventListener("click", () => this.expandCorona())
 
-    onBubbleClick() {
-        console.log("Popped!")
-        this.div.remove()
+        console.log("Corona was created!")
+    }
+
+    expandCorona() {
+        console.log("test")
+        for (let index = 0; index < 5; index++) {
+            this.spawnCorona();
+        }
     }
 }
