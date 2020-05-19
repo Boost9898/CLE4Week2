@@ -1,6 +1,6 @@
 # CMTTHE04 Week 2
 
-Pixel Aquarium Typescript
+Pixel Aquarium Typescript.
 
 ## Voorbereiding
 
